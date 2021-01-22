@@ -23,9 +23,9 @@
     }
 
     function set_element(element, totalElement){
-        var percentage = 200 / totalElement;
+        var percentage = 100 / totalElement;
         if($(element).length == 1){
-            $("#fill").animate({width:progress+(30*percentage)+"%"},1000,function(){
+            $("#fill").animate({width:progress+(60*percentage)+"%"},1000,function(){
                 if (document.getElementById('fill').style.width== "100%") {
                     $(".main").fadeOut(500);
                 }

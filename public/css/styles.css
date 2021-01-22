@@ -182,7 +182,7 @@
 	height: 100%;
 	background: url("../files/4.jpg") ;
 	background-size: cover;
-	opacity: 0.5;
+	opacity: 0.4;
 	animation: anim 25s linear infinite;
 }
 
@@ -219,13 +219,17 @@
 
 .btn-land{
 	width: 202px;
-	font-family: GlossAndBloom;
+	/* font-family: GlossAndBloom; */
 	text-decoration: none;
-	line-height: 70px;
+	line-height: 65px;
 	position: absolute;
-	left: 35%;
+	left: 33.5%;
 	text-transform: uppercase;
 	color:white;
+}
+
+.btn-land span{
+	margin-left: 20px;
 }
 
 .btn-land svg{
