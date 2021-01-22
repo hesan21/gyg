@@ -1,0 +1,640 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+	font-family: "GlossAndBloom";
+	src: url("../files/glossfont/gloss_and_bloom-webfont.eot");
+	src: url("../files/glossfont/gloss_and_bloom-webfont.woff") format("woff"),
+	url("../files/glossfont/gloss_and_bloom-webfont.otf") format("opentype"),
+	url("../files/glossfont/gloss_and_bloom-webfont.svg#filename") format("svg");
+}
+
+@font-face {
+	font-family: "Anurati";
+	src: url("../files/Anurati-Regular.eot");
+	src: url("../files/Anurati-Regular.woff") format("woff"),
+	url("../files/Anurati-Regular.otf") format("opentype"),
+	url("../files/Anurati-Regular.svg#filename") format("svg");
+}
+
+/*Preloader */
+
+.main{
+	width: 100%;
+	height: 100vh;background: whitesmoke /*linear-gradient(80deg, #110e1f, #1b1730)*/;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 9999;
+}
+
+.text{
+	width: 100%;
+	height: 100vh;
+	background-image: url("one.jpg");
+	background-size: 100% 100%;
+	background-position: center;
+	font-family: GlossAndBloom;
+	font-size: 80px;
+	text-align: center;
+	line-height: 650px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(-5deg);
+	color: green;
+	-webkit-background-clip: text;
+	pointer-events: none;
+	animation: animpre 2s infinite;
+}
+
+@keyframes animpre{
+	25%{color: darkgreen;}
+	50%{color: green;}
+	75%{color: darkgreen;}
+	100%{color: green;}
+}
+
+.title{
+	font-family: monospace;
+	font-size: 14px;
+	color: black;
+	letter-spacing: 5px;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -10%);
+}
+
+.bar{
+	width: 180px;
+	height: 2px;
+	background-color: pink;
+	position: absolute;
+	top: 63%;
+	left: 50%;
+	transform : translate(-50%, -50%);
+	z-index: 9999;
+}
+
+#fill{
+	width: 0%;
+	height: 100%;
+	background-color: black;
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+@media screen and (max-width: 768px) {
+	.text{
+		font-size: 50px;
+	}
+}
+
+/*landing Page */
+.mylogo{
+	font-family: Anurati;
+	font-size: 50px;
+	font-weight: 900;
+	margin-bottom: 20px;
+}
+
+.mylogo span{
+	display: inline;
+	margin: 0;
+	padding: 0;
+	animation: animate 3s linear infinite;
+}
+
+.mylogo span:nth-child(1){
+	animation-delay: 0s ;
+}
+
+.mylogo span:nth-child(2){
+	animation-delay: 0.25s;
+}
+.mylogo span:nth-child(3){
+	animation-delay: 0.5s;
+}
+.mylogo span:nth-child(4){
+	animation-delay: 0.75s;
+}
+.mylogo span:nth-child(5){
+	animation-delay: 1s;
+}
+.mylogo span:nth-child(6){
+	animation-delay: 1.25s;
+}
+.mylogo span:nth-child(7){
+	animation-delay: 1.5s;
+}
+.mylogo span:nth-child(8){
+	animation-delay: 1.75s;
+}
+.mylogo span:nth-child(9){
+	animation-delay: 2s;
+}
+.mylogo span:nth-child(10){
+	animation-delay: 2.25s;
+}
+.mylogo span:nth-child(11){
+	animation-delay: 2.5s;
+}
+
+@keyframes animate{
+	0%, 100%{
+		color: #fff;
+		filter: blur(2px);
+		box-shadow: 0 0 10px #00b3ff,
+					0 0 20px #00b3ff,
+					0 0 40px #00b3ff,
+					0 0 80px #00b3ff,
+					0 0 120px #00b3ff,
+					0 0 200px #00b3ff,
+					0 0 300px #00b3ff,
+					0 0 400px #00b3ff,
+					0 0 500px #00b3ff,
+					0 0 600px #00b3ff,
+					0 0 700px #00b3ff,
+	}
+	5%, 95%{
+		color: hotpink;
+		filter: blur(0px);
+		text-shadow: 0 0 10px none;
+	}
+}
+
+.landing-page{
+	width: 100%;
+	height: 100vh;
+	background-color: #000;
+	position: relative;
+	overflow: hidden;
+}
+.landing-page::after{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: url("../files/4.jpg") ;
+	background-size: cover;
+	opacity: 0.5;
+	animation: anim 25s linear infinite;
+}
+
+@keyframes anim{
+	50%{
+		transform: scale(1.5);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
+
+.page-content{
+	position: absolute;
+	bottom: 20%;
+	left: 51%;
+	transform: translate(-50%,-50%);
+	z-index: 1;
+	width: 100%;
+	max-width: 800px;
+	text-align: center;
+	padding: 0 40px;
+	box-sizing: border-box;
+}
+
+.page-content h2{
+	color: #ff7979;
+	text-transform: uppercase;
+	font-size: 50px;
+	font-weight: 900;
+	margin-bottom: 20px;
+}
+
+.btn-land{
+	width: 202px;
+	font-family: GlossAndBloom;
+	text-decoration: none;
+	line-height: 70px;
+	position: absolute;
+	left: 35%;
+	text-transform: uppercase;
+	color:white;
+}
+
+.btn-land svg{
+	width: 100%;
+	height: 60px;
+	position: absolute;
+}
+
+.btn-land rect{
+	fill: none;
+	stroke: whitesmoke;
+	stroke-width: 2;
+	stroke-dasharray: 422, 0;
+	transition: all .6s ease;
+}
+.btn-land:hover{
+	color: lightgreen;
+}
+.btn-land:hover rect{
+	stroke-width:5;
+	stroke-dasharray: 15,295;
+	stroke-dashoffset: 48;
+}
+
+@media screen and (max-width: 768px) {
+	.mylogo{
+		font-family: Anurati;
+		font-size: 35px;
+		font-weight: 900;
+		margin-bottom: 20px;
+	}
+	.btn-land{
+		width: 202px;
+		font-family: GlossAndBloom;
+		text-decoration: none;
+		line-height: 70px;
+		position: absolute;
+		left: 27%;
+		text-transform: uppercase;
+		color:white;
+	}
+	.page-content{
+		bottom:15%;
+	}
+}
+
+
+/* Laravel Custom Styling */
+
+/* Navbar */
+nav{
+	height: 6vh;
+	width: 100%;
+}
+.nav-text{
+	position: absolute;
+	top: -200px;
+	left: 45%;
+	text-transform: uppercase;
+	font-family: Anurati;
+	background-color: whitesmoke;
+	letter-spacing: 5px;
+	animation: navanim 1s linear;
+	animation-fill-mode: forwards;
+}
+
+@keyframes navanim{
+	100%{
+		top:0;
+	}
+}
+.nav-text a{
+	color:grey;
+	text-decoration: none;
+}
+
+.nav-text a:hover{
+	color: darkslategrey;
+}
+
+/* Parallex Image */
+.parallex{
+	height: 30vh;
+	background: url('../files/21.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.myheading{
+	font-family: 'ZCOOL QingKe HuangYou';
+	font-size: 1.4em;
+}
+.myindex{
+	font-family: 'ZCOOL QingKe HuangYou';
+
+	font-size: 1.3em;
+}
+
+/* Sidebar*/
+.mysidebar .navbar-nav{
+	position: absolute;
+	left:-1000px;
+	animation: anim1 1s;
+	animation-fill-mode: forwards;
+	animation-delay: .5s;
+}
+
+.mysidebar .navbar-nav .nav-item{
+	padding-bottom: 20px;
+	width: 250px;
+}
+
+.mysidebar .navbar-nav .nav-item.active{
+	padding: 15px;
+	margin-bottom: 15px;
+	background-color: brown;
+	/* transition: background-color 0.5s linear;
+	-webkit-transition: background-color 0.5s linear; */
+	animation: anim2 8s infinite;
+	animation-fill-mode: forwards;
+	animation-delay: .5s;
+	border-radius: 2px;
+}
+
+@keyframes anim1{
+	100%{
+		left:20px;
+	}
+}
+
+@keyframes anim2{
+	25%{background-color: rgb(97, 22, 22)}
+	50%{background-color: brown}
+	75%{background-color: rgb(97, 22, 22)}
+	100%{background-color: brown}
+}
+
+.mysidebar .navbar-nav .nav-item.active a{
+	color: white;
+}
+
+.mysidebar .navbar-nav .nav-item {
+	text-transform: uppercase;
+	font-size: 16px;
+	font-family: 'ZCOOL QingKe HuangYou';
+}
+@media screen and (max-width: 768px) {
+	.nav-text{
+		left: 35%;
+	}
+	.mysidebar .navbar-nav{
+		width: 95%;
+	}
+	.mysidebar .navbar-nav .nav-item{
+		padding-bottom: 20px;
+		width: 100%;
+	}
+	#myform{
+		position: absolute;
+		left:-2000px;
+		top:350px;
+	}
+	#formwithsection{
+		position: absolute;
+		left:-2000px;
+		top:450px;
+	}
+	
+}
+/*Form Styling */
+#myform{
+	position: absolute;
+	left:-2000px;
+	animation: formanim1 1s;
+	animation-fill-mode: forwards;
+	animation-delay: .5s;
+}
+
+@keyframes formanim1{
+	100%{
+		left:20px;
+	}
+}
+
+.form-signin {
+	width: 100%;
+	max-width: 420px;
+	padding: 15px;
+	margin: auto;
+  }
+  
+  .form-label-group {
+	position: relative;
+	margin-bottom: 1rem;
+  }
+  
+  .form-label-group > input,
+  .form-label-group > label {
+	height: 3.125rem;
+	padding: .75rem;
+  }
+  
+  .form-label-group > label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	margin-bottom: 0; /* Override default `<label>` margin */
+	line-height: 1.5;
+	color: #495057;
+	pointer-events: none;
+	cursor: text; /* Match the input under the label */
+	border: 1px solid transparent;
+	border-radius: .25rem;
+	transition: all .1s ease-in-out;
+  }
+  
+  .form-label-group input::-webkit-input-placeholder {
+	color: transparent;
+  }
+  
+  .form-label-group input:-ms-input-placeholder {
+	color: transparent;
+  }
+  
+  .form-label-group input::-ms-input-placeholder {
+	color: transparent;
+  }
+  
+  .form-label-group input::-moz-placeholder {
+	color: transparent;
+  }
+  
+  .form-label-group input::placeholder {
+	color: transparent;
+  }
+  
+  .form-label-group input:not(:placeholder-shown) {
+	padding-top: 1.25rem;
+	padding-bottom: .25rem;
+  }
+  
+  .form-label-group input:not(:placeholder-shown) ~ label {
+	padding-top: .25rem;
+	padding-bottom: .25rem;
+	font-size: 12px;
+	color: #777;
+  }
+  
+  /* Fallback for Edge
+  -------------------------------------------------- */
+  @supports (-ms-ime-align: auto) {
+	.form-label-group > label {
+	  display: none;
+	}
+	.form-label-group input::-ms-input-placeholder {
+	  color: #777;
+	}
+  }
+  
+  /* Fallback for IE
+  -------------------------------------------------- */
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.form-label-group > label {
+	  display: none;
+	}
+	.form-label-group input:-ms-input-placeholder {
+	  color: #777;
+	}
+  }
+
+  .myformgroup{
+	font-size: 18px;
+	color: #555;
+  }
+  .myformgroup input{
+	  margin:0 20px;
+  }
+
+  #formwithsection{
+		position: absolute;
+		left:-2000px;
+		animation: formanim3 1s;
+		animation-fill-mode: forwards;
+		animation-delay: .5s;
+		font-family: 'ZCOOL QingKe HuangYou';
+		font-size: 20px;
+  }
+  
+@keyframes formanim3{
+	100%{
+		left:20px;
+	}
+}
+  .btn-section{
+	  background: url("../files/3.jpg");
+	  background-attachment: fixed;
+	  background-size: cover no-repeat;
+  }
+  
+  .btn-section button{
+	  font-size: 18px;
+  }
+  
+  .mylabel{
+	font-family: 'ZCOOL QingKe HuangYou';
+  }
+  
+  .textinput{
+	  display: inline;
+	  font-size: 14px;
+	  font-family: cursive;
+   }
+   #textval{
+	  font-size: 15px;
+	  font-family: cursive;
+	  color: black;
+   }
+
+
+
+  /* carousel */
+.myquotes{
+	width:32%;
+	height: 300px;
+	border: 1px solid ;
+	position: absolute;
+	top: 10%;
+	left:35%;
+	box-shadow: 0 4px 8px 0 #888888, 0 6px 20px 0 #888888;
+	/* box-shadow: 10px 10px 8px #888888; */
+	overflow: hidden;
+	font-family: 'Courgette';
+	font-size: 20px;
+	/* background:rgba(73, 39, 39,1); */
+}
+#quote-carousel 
+{
+  padding: 50px 30px 20px 30px;
+  margin-top: 30px 0px 0px;
+  color:white;
+}
+
+.item blockquote {
+	position: relative;
+    border-left: none; 
+	margin: 0;
+}
+.item blockquote p{
+	position: absolute;
+	left:50%;
+}
+
+/**
+  MEDIA QUERIES
+*/
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) { 
+	.myquotes{
+		width:98%;
+		border: 1px solid ;
+		position: absolute;
+		top: 20%;
+		left:1%;
+	}
+    #quote-carousel 
+    {
+      margin-bottom: 0;
+      padding: 0 40px 30px 40px;
+      margin-top: 30px;
+    }
+    
+}
+
+
+@font-face {
+	font-family: "ubuntu";
+	font-style: italic;
+	font-weight: 300;
+	src: local("Lato Light Italic"), local("Lato-LightItalic"), url(https://fonts.gstatic.com/s/ubuntucondensed/v8/u-4k0rCzjgs5J7oXnJcM_0kACGMtT-Dfqw.woff2) format("woff2");
+  }
+  .myresultparent {
+	text-align: center;
+  }
+  .myresultparent .myresult {
+	color: #fff;
+	font-size: 92px;
+	/* font-family: "ubuntu"; */
+	text-transform: uppercase;
+	font-weight: 700;
+	font-family: "Josefin Sans", sans-serif;
+	background: linear-gradient(to right, rgb(60, 110, 60) 10%, rgb(177, 98, 98) 50%);
+	background-size: auto auto;
+	background-clip: border-box;
+	background-size: 200% auto;
+	color: #fff;
+	background-clip: text;
+	text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: textclip 5s linear infinite;
+	/* display: inline-block; */
+  }
+  
+  @keyframes textclip {
+	to {
+	  background-position: 200% center;
+	}
+  }
+  
